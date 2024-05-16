@@ -18,8 +18,8 @@ a {
     color: inherit;
 }
 
-/* Navigation Styles */
-nav {
+/* Header Styles */
+header {
     background-color: #333;
     color: #fff;
     padding: 10px 0;
@@ -35,88 +35,68 @@ nav ul li {
     margin-right: 20px;
 }
 
-/* Header Section Styles */
-#welcome {
-    text-align: center;
+.hero {
     padding: 50px 0;
 }
 
-.hero-image {
-    background-image: url('hero-image.jpg');
-    background-size: cover;
-    height: 400px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.hero-image h1 {
-    color: #fff;
+.hero h1 {
     font-size: 36px;
-}
-
-/* About Section Styles */
-.about-content {
-    padding: 50px 20px;
-    text-align: center;
-}
-
-/* Issues Section Styles */
-.issues-content {
-    padding: 50px 20px;
-}
-
-.issues-content ul {
-    margin-left: 20px;
-}
-
-/* Stories Section Styles */
-.stories-content {
-    padding: 50px 20px;
-}
-
-.story {
     margin-bottom: 20px;
-    border: 1px solid #ccc;
-    padding: 10px;
 }
 
-/* Call to Action Section Styles */
-.cta-content {
+/* Main Content Styles */
+main {
+    padding: 20px;
+}
+
+.content {
+    max-width: 800px;
+    margin: 0 auto;
     text-align: center;
-    padding: 50px 20px;
 }
 
+.content h2 {
+    margin-bottom: 20px;
+}
+
+.content p {
+    margin-bottom: 20px;
+}
+
+/* Button Styles */
 .btn {
+    display: inline-block;
     background-color: #007bff;
     color: #fff;
     padding: 10px 20px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    text-decoration: none;
 }
 
 .btn:hover {
     background-color: #0056b3;
 }
 
-/* Contact Section Styles */
-.contact-content {
-    padding: 50px 20px;
-    text-align: center;
+/* Form Styles */
+form {
+    max-width: 500px;
+    margin: 0 auto;
+    text-align: left;
 }
 
-form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+label,
+input,
+textarea {
+    display: block;
+    margin-bottom: 10px;
 }
 
 input,
 textarea {
-    margin-bottom: 10px;
-    padding: 5px;
     width: 100%;
+    padding: 5px;
 }
 
 /* Footer Styles */
@@ -135,19 +115,4 @@ footer {
 
 .footer-content ul li {
     margin-right: 10px;
-}
-
-/* Media Queries for Responsive Design */
-@media only screen and (max-width: 768px) {
-    nav ul {
-        flex-direction: column;
-    }
-
-    nav ul li {
-        margin-bottom: 10px;
-    }
-
-    .hero-image {
-        height: 300px;
-    }
 }
