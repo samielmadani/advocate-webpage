@@ -1,0 +1,153 @@
+/* styles.css */
+
+/* Global Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Navigation Styles */
+nav {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin-right: 20px;
+}
+
+/* Header Section Styles */
+#welcome {
+    text-align: center;
+    padding: 50px 0;
+}
+
+.hero-image {
+    background-image: url('hero-image.jpg');
+    background-size: cover;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-image h1 {
+    color: #fff;
+    font-size: 36px;
+}
+
+/* About Section Styles */
+.about-content {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+/* Issues Section Styles */
+.issues-content {
+    padding: 50px 20px;
+}
+
+.issues-content ul {
+    margin-left: 20px;
+}
+
+/* Stories Section Styles */
+.stories-content {
+    padding: 50px 20px;
+}
+
+.story {
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    padding: 10px;
+}
+
+/* Call to Action Section Styles */
+.cta-content {
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.btn {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+}
+
+/* Contact Section Styles */
+.contact-content {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+input,
+textarea {
+    margin-bottom: 10px;
+    padding: 5px;
+    width: 100%;
+}
+
+/* Footer Styles */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.footer-content ul {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.footer-content ul li {
+    margin-right: 10px;
+}
+
+/* Media Queries for Responsive Design */
+@media only screen and (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+    }
+
+    nav ul li {
+        margin-bottom: 10px;
+    }
+
+    .hero-image {
+        height: 300px;
+    }
+}
