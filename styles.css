@@ -130,8 +130,8 @@ footer a:hover {
 
 /* Padding for Mobile View */
 @media (max-width: 576px) {
-    body {
-        padding-left: 10px; /* Left padding for body */
-        padding-right: 10px; /* Right padding for body */
+    .text-container {
+        padding-left: 15px; /* Left padding for body */
+        padding-right: 15px; /* Right padding for body */
     }
 }
