@@ -56,20 +56,20 @@
                     <div class="col-md-8 offset-md-2">
                         <h2 class="mb-4">Sign Our Petition</h2>
                         <p class="lead mb-4">Join us in advocating for positive changes in the healthcare system. Sign our petition below:</p>
-                        <form action="submit_petition.php" method="POST" id="petitionForm">
-                            <div class="form-group">
+                        <form style="display: flex; flex-direction: column; align-items: center;" action="submit_petition.php" method="POST" id="petitionForm">
+                            <div style="width: 100%;" class="form-group">
                                 <label for="name">Full Name</label>
                                 <input type="text" class="form-control" id="name" name="name" required>
                             </div>
-                            <div class="form-group">
+                            <div style="width: 100%;" class="form-group">
                                 <label for="email">Email Address</label>
                                 <input type="email" class="form-control" id="email" name="email" required>
                             </div>
-                            <div class="form-group">
+                            <div style="width: 100%;" class="form-group">
                                 <label for="message">Message (Optional)</label>
                                 <textarea class="form-control" id="message" name="message" rows="5"></textarea>
                             </div>
-                            <button type="submit" class="btn btn-primary" onclick="submitPetition()">Sign Petition</button>
+                            <button style="max-width: 150px;" type="submit" class="btn btn-primary" onclick="submitPetition()">Sign Petition</button>
                         </form>
                         
                     </div>
