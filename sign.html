@@ -118,6 +118,18 @@
     </div>
 </div>
 
+<!-- Name Validation Modal -->
+<div class="modal fade" id="nameValidationModal" tabindex="-1" role="dialog" aria-labelledby="nameValidationModalLabel"
+    aria-hidden="true">
+    <a>Please enter your full name.</a>
+</div>
+
+<!-- Email Validation Modal -->
+<div class="modal fade" id="emailValidationModal" tabindex="-1" role="dialog" aria-labelledby="emailValidationModalLabel"
+    aria-hidden="true">
+    <a>Please enter your email address.</a>
+</div>
+
 <script>
     function submitPetition() {
         // Prevent form submission
@@ -129,12 +141,14 @@
 
         // Check if name and email inputs are filled
         if (name.trim() === '') {
-            alert('Please enter your full name.');
+            // Show Bootstrap modal for name validation
+            $('#nameValidationModal').modal('show');
             return; // Stop the function if name is not filled
         }
 
         if (email.trim() === '') {
-            alert('Please enter your email address.');
+            // Show Bootstrap modal for email validation
+            $('#emailValidationModal').modal('show');
             return; // Stop the function if email is not filled
         }
 
