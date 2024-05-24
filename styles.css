@@ -1,118 +1,124 @@
-/* styles.css */
-
 /* Global Styles */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
+    background-color: #f8f9fa; /* Light grey background */
 }
 
-ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
+/* Navigation Bar */
+.navbar {
+    background-color: #343a40; /* Dark grey navbar */
 }
 
-a {
-    text-decoration: none;
-    color: inherit;
+.navbar-brand {
+    font-size: 1.5rem;
 }
 
-/* Header Styles */
-header {
-    background-color: #333;
-    color: #fff;
-    padding: 10px 0;
-    text-align: center;
+.navbar-nav .nav-link {
+    color: #ffffff; /* White text for links */
+    margin-right: 10px;
+    font-size: 1.1rem;
 }
 
-nav ul {
-    display: flex;
-    justify-content: center;
+.navbar-nav .nav-link:hover {
+    color: #c8cbcf; /* Light grey on hover */
 }
 
-nav ul li {
-    margin-right: 20px;
+/* Hero Section */
+#hero {
+    background: url('background.jpg') no-repeat center center;
+    background-size: cover;
+    color: #ffffff;
+    padding: 100px 0;
 }
 
-.hero {
-    padding: 50px 0;
+#hero h1 {
+    font-size: 3rem;
 }
 
-.hero h1 {
-    font-size: 36px;
-    margin-bottom: 20px;
+#hero p {
+    font-size: 1.5rem;
 }
 
-/* Main Content Styles */
-main {
-    padding: 20px;
+/* Main Content Sections */
+.container.py-4 {
+    padding: 60px 0;
 }
 
-.content {
-    max-width: 800px;
-    margin: 0 auto;
-    text-align: center;
+h2.mb-4 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
 }
 
-.content h2 {
-    margin-bottom: 20px;
+p.lead {
+    font-size: 1.2rem;
 }
 
-.content p {
-    margin-bottom: 20px;
+/* Buttons */
+.btn-primary {
+    background-color: #007bff; /* Blue button */
+    border-color: #007bff;
 }
 
-/* Button Styles */
-.btn {
-    display: inline-block;
-    background-color: #007bff;
-    color: #fff;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    text-decoration: none;
+.btn-primary:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+    border-color: #0056b3;
 }
 
-.btn:hover {
-    background-color: #0056b3;
-}
-
-/* Form Styles */
-form {
-    max-width: 500px;
-    margin: 0 auto;
-    text-align: left;
-}
-
-label,
-input,
-textarea {
-    display: block;
-    margin-bottom: 10px;
-}
-
-input,
-textarea {
-    width: 100%;
-    padding: 5px;
-}
-
-/* Footer Styles */
-footer {
-    background-color: #333;
-    color: #fff;
-    text-align: center;
+/* Footer Section */
+footer.bg-dark {
+    background-color: #343a40;
+    color: #c8cbcf; /* Light grey text */
     padding: 20px 0;
 }
 
-.footer-content ul {
-    display: flex;
-    justify-content: center;
-    margin-top: 10px;
+footer a {
+    color: #c8cbcf; /* Light grey links */
 }
 
-.footer-content ul li {
-    margin-right: 10px;
+footer a:hover {
+    color: #ffffff; /* White on hover */
+}
+
+/* Modals */
+.modal-content {
+    border-radius: 10px;
+}
+
+.modal-header {
+    background-color: #28a745; /* Light green header */
+    color: #ffffff;
+    border-bottom: none;
+}
+
+.modal-footer {
+    border-top: none;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    #hero h1 {
+        font-size: 2.5rem;
+    }
+
+    #hero p {
+        font-size: 1.2rem;
+    }
+
+    .navbar-brand {
+        font-size: 1.2rem;
+    }
+
+    .navbar-nav .nav-link {
+        font-size: 1rem;
+    }
+
+    h2.mb-4 {
+        font-size: 2rem;
+    }
+
+    p.lead {
+        font-size: 1rem;
+    }
 }
