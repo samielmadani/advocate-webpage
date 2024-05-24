@@ -6,6 +6,11 @@ body {
     background-color: #f8f9fa; /* Light grey background */
 }
 
+/* Sticky Footer Styles */
+html, body {
+    height: 100%; /* Ensure full height for the body and HTML */
+}
+
 /* Navigation Bar */
 .navbar {
     background-color: #343a40; /* Dark grey navbar */
@@ -120,5 +125,13 @@ footer a:hover {
 
     p.lead {
         font-size: 1rem;
+    }
+}
+
+/* Padding for Mobile View */
+@media (max-width: 576px) {
+    body {
+        padding-left: 10px; /* Left padding for body */
+        padding-right: 10px; /* Right padding for body */
     }
 }
