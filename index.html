@@ -188,8 +188,18 @@
 
 <script>
     function subscribeToNewsletter() {
+        
         // Prevent form submission
         event.preventDefault();
+
+        // Get the email input value
+        var email = document.getElementById('newsletter').value;
+
+        // Check if the email input is filled
+        if (email.trim() === '') {
+            alert('Please enter your email address.');
+            return; // Stop the function if email is not filled
+        }
 
         // Show the modal
         $('#subscriptionModal').modal('show');

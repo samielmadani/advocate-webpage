@@ -119,6 +119,21 @@
         // Prevent form submission
         event.preventDefault();
 
+        // Get the values of name and email inputs
+        var name = document.getElementById('name').value;
+        var email = document.getElementById('email').value;
+
+        // Check if name and email inputs are filled
+        if (name.trim() === '') {
+            alert('Please enter your full name.');
+            return; // Stop the function if name is not filled
+        }
+
+        if (email.trim() === '') {
+            alert('Please enter your email address.');
+            return; // Stop the function if email is not filled
+        }
+
         // Show the modal
         $('#petitionModal').modal('show');
 
