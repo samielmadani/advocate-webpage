@@ -192,11 +192,6 @@
     </div>
 </div>
 
-<div class="modal fade" id="emailValidationModal" tabindex="-1" role="dialog" aria-labelledby="emailValidationModalLabel"
-    aria-hidden="true">
-    <a>Please enter your email address.</a>
-</div>
-
 <script>
     function subscribeToNewsletter() {
         
@@ -208,8 +203,7 @@
 
         // Check if the email input is filled
         if (email.trim() === '') {
-            // Show Bootstrap modal for email validation
-            $('#emailValidationModal').modal('show');
+            alert('Please enter your email address.');
             return; // Stop the function if email is not filled
         }
 
