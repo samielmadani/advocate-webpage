@@ -40,9 +40,6 @@
                     <a class="nav-link" href="index.html#involved">Get Involved</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="index.html#contact">Contact</a>
-                </li>
-                <li class="nav-item">
                     <a class="nav-link" href="sign.html">Sign Petition</a>
                 </li>
             </ul>
@@ -57,7 +54,7 @@
                 <div class="col-md-8 offset-md-2">
                     <h2 class="mb-4">Sign Our Petition</h2>
                     <p class="lead mb-4">Join us in advocating for positive changes in the healthcare system. Sign our petition below:</p>
-                    <form action="submit_petition.php" method="POST">
+                    <form action="submit_petition.php" method="POST" id="petitionForm">
                         <div class="form-group">
                             <label for="name">Full Name</label>
                             <input type="text" class="form-control" id="name" name="name" required>
@@ -70,8 +67,9 @@
                             <label for="message">Message (Optional)</label>
                             <textarea class="form-control" id="message" name="message" rows="5"></textarea>
                         </div>
-                        <button type="submit" class="btn btn-primary">Sign Petition</button>
+                        <button type="submit" class="btn btn-primary" onclick="submitPetition()">Sign Petition</button>
                     </form>
+                    
                 </div>
             </div>
         </section>
@@ -94,5 +92,41 @@
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
+
+<!-- Light Green Modal for Petition -->
+<div class="modal fade" id="petitionModal" tabindex="-1" role="dialog" aria-labelledby="petitionModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content bg-success text-white">
+            <div class="modal-header">
+                <h5 class="modal-title" id="petitionModalLabel">Petition Signed</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                Thank you for signing the petition!
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    function submitPetition() {
+        // Prevent form submission
+        event.preventDefault();
+
+        // Show the modal
+        $('#petitionModal').modal('show');
+
+        // Clear the form input (optional)
+        document.getElementById('petitionForm').reset();
+    }
+</script>
+
+
 
 </html>
