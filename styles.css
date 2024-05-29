@@ -129,9 +129,9 @@ footer a:hover {
 }
 
 .rose-icon {
-    width: 5px;  /* Adjust the size as needed */
-    height: 5px; /* Adjust the size as needed */
-    fill: rgb(137, 0, 0);    /* Adjust the color as needed */
+    width: 20px;  /* Adjust the size as needed */
+    height: 20px; /* Adjust the size as needed */
+    fill: rgb(57, 57, 57);    /* Adjust the color as needed */
 }
 
 .thick-line {
