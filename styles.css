@@ -128,6 +128,11 @@ footer a:hover {
     border-top: none;
 }
 
+.thick-line {
+    border-top: 3px solid #ccc; /* Adjust the thickness and color as needed */
+    max-width: 50%;
+}
+
 .modal-dialog.modal-dialog-centered {
     display: flex;
     align-items: center;
