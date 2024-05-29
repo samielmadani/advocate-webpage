@@ -129,8 +129,8 @@ footer a:hover {
 }
 
 .thick-line {
-    border-top: 3px solid #a845ff; /* Adjust the thickness and color as needed */
-    max-width: 1000px;
+    border-top: 3px solid #777777; /* Adjust the thickness and color as needed */
+    max-width: 75%;
 }
 
 .modal-dialog.modal-dialog-centered {
