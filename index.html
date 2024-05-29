@@ -205,6 +205,23 @@
             <h2 class="mb-4">CONTACT</h2>
             <p class="lead">Reach out to us for inquiries, partnerships, or to share your story. We're here to listen and support you.</p>
         </section>
+        <br>
+
+        <form style="display: flex; flex-direction: column; align-items: center;" action="submit_petition.php" method="POST" id="contactForm">
+            <div style="width: 100%;" class="form-group">
+                <label for="name">Full Name</label>
+                <input type="text" class="form-control" id="name" name="name" required>
+            </div>
+            <div style="width: 100%;" class="form-group">
+                <label for="email">Email Address</label>
+                <input type="email" class="form-control" id="email" name="email" required>
+            </div>
+            <div style="width: 100%;" class="form-group">
+                <label for="message">Message (Optional)</label>
+                <textarea class="form-control" id="message" name="message" rows="5"></textarea>
+            </div>
+            <button style="max-width: 250px;" type="submit" class="btn btn-primary" onclick="submitContact()">Send</button>
+        </form>
 
         <!-- REFERENCES Section -->
         <section id="support" class="container py-4">
@@ -257,6 +274,27 @@
     </div>
 </div>
 
+<!-- Light Green Modal for Petition -->
+<div class="modal fade text-container" id="contactModal" tabindex="-1" role="dialog" aria-labelledby="petitionModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content bg-success text-white">
+            <div class="modal-header">
+                <h5 class="modal-title" id="petitionModalLabel">Message Sent</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                Thank you for contacting!
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
 <script>
     function subscribeToNewsletter() {
         
@@ -277,6 +315,38 @@
 
         // Clear the form input
         document.getElementById('newsletterForm').reset();
+    }
+
+    function submitContact() {
+        // Prevent form submission
+        event.preventDefault();
+
+        // Get the values of name and email inputs
+        var name = document.getElementById('name').value;
+        var email = document.getElementById('email').value;
+        var message = document.getElementById('message').value;
+
+        // Check if name and email inputs are filled
+        if (name.trim() === '') {
+            alert('Please enter your full name.');
+            return; // Stop the function if name is not filled
+        }
+
+        if (email.trim() === '') {
+            alert('Please enter your email address.');
+            return; // Stop the function if email is not filled
+        }
+
+        if (message.trim() === '') {
+            alert('Please enter your message.');
+            return; // Stop the function if email is not filled
+        }
+
+        // Show the modal
+        $('#contactModal').modal('show');
+
+        // Clear the form input (optional)
+        document.getElementById('contactForm').reset();
     }
 
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
