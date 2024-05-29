@@ -128,12 +128,10 @@ footer a:hover {
     border-top: none;
 }
 
-.dot-icon {
-    height: 10px;
-    width: 10px;
-    background-color: #000; /* Black color */
-    border-radius: 50%;
-    display: inline-block;
+.rose-icon {
+    width: 5px;  /* Adjust the size as needed */
+    height: 5px; /* Adjust the size as needed */
+    fill: rgb(137, 0, 0);    /* Adjust the color as needed */
 }
 
 .thick-line {
