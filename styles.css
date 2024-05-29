@@ -134,6 +134,10 @@ footer a:hover {
     min-height: calc(100% - 3rem); /* Adjust based on your header/footer height */
 }
 
+.signit {
+    font-weight: bolder;
+}
+
 /* Responsive Styles */
 @media (max-width: 768px) {
     #hero h1 {
