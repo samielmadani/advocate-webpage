@@ -168,3 +168,7 @@ footer a:hover {
         padding-right: 15px; /* Right padding for body */
     }
 }
+
+li {
+    padding-top: 20px;
+}
